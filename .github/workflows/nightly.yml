@@ -133,11 +133,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      # - name: rust cache
-      #   uses: Swatinem/rust-cache@v2
-      #   with:
-      #     cache-on-failure: true
-      #     cache-all-crates: true
+      - name: rust cache
+        uses: Swatinem/rust-cache@v2
+        with:
+          cache-on-failure: true
+          cache-all-crates: true
       - name: rustup toolchain install stable --profile minimal --target ${{ matrix.target }}
         run: rustup toolchain install stable --profile minimal --target ${{ matrix.target }}
       - name: Install WiX
