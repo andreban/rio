@@ -121,7 +121,7 @@ jobs:
       matrix:
         include:
           - target: x86_64-pc-windows-msvc
-            short-target: x86-64
+            short-target: x86_64
             wix-arch: x64
             installer-name: Rio-installer-x64.msi
             portable-name: Rio-portable-x64.exe
