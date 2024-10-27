@@ -147,7 +147,7 @@ jobs:
         run: |
           wix build -arch "${{ matrix.wix-arch}}" -ext WixToolset.UI.wixext -ext WixToolset.Util.wixext \
           -out "./${{ matrix.installer-name }}" "misc/windows/rio.wxs"
-      - run: cp ./target/release/rio.exe ./{{ matrix.portable.name }}
+      - run: cp ./target/release/rio.exe ./${{ matrix.portable-name }}
       - name: Release Nightly
         uses: softprops/action-gh-release@v2
         with:
@@ -157,5 +157,5 @@ jobs:
           append_body: true
           token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            ./{{ matrix.portable-name }}
-            ./{{ matrix.installer-name }}
+            ./${{ matrix.portable-name }}
+            ./${{ matrix.installer-name }}
