@@ -122,8 +122,8 @@ jobs:
         include:
           - target: x86_64-pc-windows-msvc
             wix-arch: x64
-            installer-name: Rio-installer.msi
-            portable-name: Rio-portable.exe
+            installer-name: Rio-installer-x64.msi
+            portable-name: Rio-portable-x64.exe
           - target: aarch64-pc-windows-msvc 
             wix-arch: arm64
             installer-name: Rio-installer-arm64.msi
